@@ -1,20 +1,16 @@
 package org.example.powerplants;
 
-public class CoalPlant extends PowerStation {
+public class CoalPlant extends PowerPlant {
+    private final double ENERGY_PRODUCTION = 7; // MWh
+    private final double RESOURCE_CONSUMPTION = 100; // ton węgla
 
-
-    public CoalPlant(double amountOfResources,double amountOfEnergy) {
-        super(amountOfResources,amountOfEnergy);
+    @Override
+    public double getEnergyProduction() {
+        return ENERGY_PRODUCTION;
     }
 
     @Override
-    public void useResources(double amountOfResources){
-         amountOfResources -= 100;
+    public double getResourceConsumption() {
+        return RESOURCE_CONSUMPTION;
     }
-
-    @Override
-    public void generatePower(double amountOfResources) {
-    }
-
-
 }
